@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         try {
-            const res = await axios.post('http://localhost:3000/login', { email, password });
+            const res = await axios.post('https://eval2.onrender.com/login', { email, password });
             const loggedInUser = { email: res.data.payload.user.email };
             setUser(loggedInUser);
             setToken(res.data.token);
@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const register = async (email, password) => {
-        const response = await fetch('http://localhost:3000/signin', {
+        const response = await fetch('https://eval2.onrender.com/signin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

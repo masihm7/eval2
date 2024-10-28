@@ -21,7 +21,7 @@ const EmployeeForm = () => {
 
         try {
             const token = localStorage.getItem('token');
-            await axios.post('http://localhost:3000/employees', newEmployee, {
+            await axios.post('https://eval2.onrender.com/employees', newEmployee, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

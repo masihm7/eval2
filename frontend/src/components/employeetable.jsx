@@ -10,7 +10,7 @@ const EmployeeTable = () => {
         const fetchEmployees = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('http://localhost:3000/employees', {
+                const response = await axios.get('https://eval2.onrender.com/employees', {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
@@ -32,7 +32,7 @@ const EmployeeTable = () => {
         console.log('Delete called for ID:', id);
         try {
             const token = localStorage.getItem('token');
-            await axios.delete(`http://localhost:3000/employees/${id}`, {
+            await axios.delete(`https://eval2.onrender.com/employees/${id}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
